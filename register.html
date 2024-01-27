@@ -1,72 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kurglas | Register</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
 </head>
 
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <!-- Logo here -->
-        <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
-      </a>
-    </div>
-  </nav>
-  <!-- Navbar -->
-
-  <!-- Login container -->
-  <div class="container">
-    <div class="row justify-content-md-center align-items-center" style="height: 80vh;">
-      <div class="col col-md-8 col-md-auto">
-        <!-- Login form -->
-        <div class="card ">
-          <div class="card-header text-center">
-            <h3>Register</h3>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <div
+      class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+      <div class="d-flex align-items-center justify-content-center w-100">
+        <div class="row justify-content-center w-100">
+          <div class="col-md-8 col-lg-6 col-xxl-3">
+            <div class="card mb-0">
+              <div class="card-body">
+                <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
+                  <img src="../assets/images/logos/dark-logo.svg" width="180" alt="">
+                </a>
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputtext1" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-4">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-4">
+                    <label for="exampleInputConPassword1" class="form-label">Confirm password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-4">
+                    <label for="exampleInputFacebook1" class="form-label">Facebook url <a href="#"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal"><small>
+                          ดูวิธีการรับลิ้งค์ที่นี่</small></a></label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign Up</a>
+                  <div class="d-flex align-items-center justify-content-center">
+                    <p class="fs-4 mb-0 fw-bold">เป็นสมาชิกอยู่แล้ว?</p>
+                    <a class="text-primary fw-bold ms-2" href="./login.html">Sign In</a>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <div class="card-body">
-            <div class="mb-3">
-              <label for="username" class="form-label ">Username</label>
-              <input type="text" class="form-control" id="username" placeholder="Example">
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="text" class="form-control" id="password" placeholder="password">
-            </div>
-            <div class="mb-3">
-              <label for="conpassword" class="form-label">Confirm Password</label>
-              <input type="text" class="form-control" id="conpassword" placeholder="confirm password">
-            </div>
-            <div class="mb-3">
-              <label for="facebook" class="form-label">facebook url <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><small>ดูวิธีการรับลิ้งค์ที่นี่</small></a>
-              </label>
-              <input type="text" class="form-control" id="facebook" placeholder="facebook url">
-            </div>
-            <div class="d-grid gap-2 col-6 mx-auto text-center">
-              <button class="btn btn-outline-success" type="button"
-                onclick="window.location.href = '/login.html'">Register</button>
-              <small>Log in <a href="login.html">here</a></small>
-            </div>
-
-          </div>
-
         </div>
-
-        <!-- Login form -->
       </div>
     </div>
   </div>
-  <!-- Login container -->
+
 
   <!-- Modal -->
-  <div class="modal fade modal-dialog-scrollable" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade modal-dialog-scrollable" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -97,9 +94,9 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
