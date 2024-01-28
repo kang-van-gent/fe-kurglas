@@ -7,9 +7,10 @@
   <title>Kurglas | Shop</title>
   <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
   <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
 </head>
 
-<body>
+<body id="app">
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
@@ -129,7 +130,7 @@
                 <h5 class="card-title fw-semibold">ซื้อการ์ด</h5>
               </div>
               <div>
-                <div class="input-group mb-3">
+                <div class="input-group">
                   <input type="text" class="form-control" placeholder="ใส่ชื่อการ์ด" aria-label="search"
                     aria-describedby="search">
                   <button class="btn btn-outline-dark" type="button" id="search">ค้นหา</button>
@@ -158,7 +159,35 @@
                     </div>
                     <div class="align-items-center justify-content-center ">
                       <div class="d-grid gap-2">
-                        <button class="btn btn-outline-dark" type="button">ใส่ตะกร้า</button>
+                        <button class="btn btn-outline-dark" type="button" @click='toasty'>ใส่ตะกร้า</button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- order cards  -->
+              <!-- order cards  -->
+              <div class="col-sm-6 col-xl-3">
+                <div class="card overflow-hidden rounded-2">
+                  <div class="position-relative">
+                    <a href="javascript:void(0)"><img src="../assets/images/products/s5.jpg"
+                        class="card-img-top rounded-0" alt="..."></a>
+                    <a href="javascript:void(0)"
+                      class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3"
+                      data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i
+                        class="ti ti-basket fs-4"></i></a>
+                  </div>
+                  <div class="card-body pt-3 p-4">
+                    <h6 class="fw-semibold fs-4">MacBook Air Pro</h6>
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <h6 class="fw-semibold fs-4 mb-0">$650 <span
+                          class="ms-2 fw-normal text-muted fs-3"><del>$900</del></span></h6>
+
+                    </div>
+                    <div class="align-items-center justify-content-center ">
+                      <div class="d-grid gap-2">
+                        <button class="btn btn-outline-dark" type="button"  @click='toasty()'>ใส่ตะกร้า</button>
                       </div>
 
                     </div>
@@ -178,33 +207,31 @@
       </div>
 
 
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Order Details</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-
-            </div>
-          </div>
-        </div>
+      <!-- Toast -->
+  <div class="position-fixed bottom-0 start-50 translate-middle-x p-3" style="z-index: 11">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">สำเร็จ!</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
+      <div class="toast-body">
+        เพิ่มสินค้าลงตระกร้าเรียบร้อย
+      </div>
+    </div>
+  </div>
 
 
     </div>
   </div>
+  
+
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/sidebarmenu.js"></script>
   <script src="../assets/js/app.min.js"></script>
   <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
